@@ -2,7 +2,7 @@ spinner
 =======
 
 A simple ASCII loader indicator in JS.
-Check out the demo at heroku.
+Check [out the demo](http://estevaoam.github.io/spinner).
 
 ## How do I use this mofo?!
 
