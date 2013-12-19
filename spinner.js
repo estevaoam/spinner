@@ -29,6 +29,6 @@ var Spinner = Spinner || {
       if (frame === this.spinner.length) {
         frame = 0;
       }
-    }.bind(this), timerate);
+    }.bind(this), this.timerate);
   }
 }
