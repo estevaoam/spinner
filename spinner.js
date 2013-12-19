@@ -9,8 +9,13 @@ var Spinner = Spinner || {
   loader: function(opts){
     this.el = opts.element;
     this.type = opts.type || 'default';
+    this.timerate = opts.timerate || 200;
 
-    this.spinner = this.spinners[this.type];
+    if (typeof this.type == 'object') {
+      this.spinner = this.type;
+    } else {
+      this.spinner = this.spinners[this.type];
+    }
 
     this.el.innerHTML = '';
 
@@ -24,6 +29,6 @@ var Spinner = Spinner || {
       if (frame === this.spinner.length) {
         frame = 0;
       }
-    }.bind(this), 200);
+    }.bind(this), timerate);
   }
 }
